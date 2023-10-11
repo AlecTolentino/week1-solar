@@ -14,19 +14,32 @@ public class Movement {
     }
 
     
-    public void movePlanet() {
-
-        System.out.println(planetSpeed.getAngle());
-
-        planetSpeed.setVelocity(4);
+    public void movePlanet(Planet changePlanet) {
 
         while(true) {
 
-            //System.out.println(planetSpeed.getAngle());
-            planetSpeed.setAngle(5);
-
+            changePlanet.setAngle(changePlanet.getAngle() + changePlanet.getVelocity());
+            updatePlanet(planetSpeed.getAngle());
         }
-
         
+    }
+    
+
+    // for(int i = 0; i < allPlanets.length; i++) {
+
+    //     if(allPlanets[i] = null) {
+
+    //         allPlanets[i] = Planet;
+    //     }
+    // }
+
+
+    public void updatePlanet(double update) {
+
+        solarSpeed.finishedDrawing();
+
+        solarSpeed.drawSolarObject(sunSpeed.getDistance(), sunSpeed.getAngle(), sunSpeed.getDiameter(), sunSpeed.getColour());
+
+        solarSpeed.drawSolarObject(planetSpeed.getDistance(), update, planetSpeed.getDiameter(), planetSpeed.getColour());
     }
 }

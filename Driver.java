@@ -9,12 +9,15 @@ public class Driver {
         Sun theSun = new Sun(nSolar);
         theSun.createSun(0, 0, 175, "YELLOW");
         
-        Planet one = new Planet(nSolar, theSun, 10);
+        Planet one = new Planet(nSolar, theSun, 1);
         one.createPlanet(225, 90, 35, "BLUE");
 
         Movement solar1 = new Movement(nSolar, theSun, one /*,null*/);
-        solar1.movePlanet();
+      
+        solar1.movePlanet(one);
 
+        
+    
       
         
       
