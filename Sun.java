@@ -35,7 +35,7 @@ public class Sun {
 
     public void createSun(double newDis, double newAngle, double newDiam, java.lang.String newCol) {
 
-        mySolarSun.drawSolarObject(newDis, newAngle, newDiam, newCol);
+        //mySolarSun.drawSolarObject(newDis, newAngle, newDiam, newCol);
         distance = newDis;
         angle = newAngle;
         diameter = newDiam;

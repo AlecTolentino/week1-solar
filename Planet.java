@@ -61,7 +61,7 @@ public class Planet {
 
     public void createPlanet(double newDis, double newAngle, double newDiam, java.lang.String newCol) {
 
-        mySolar.drawSolarObject(newDis, newAngle, newDiam, newCol);
+        //mySolar.drawSolarObject(newDis, newAngle, newDiam, newCol);
         distance = newDis;
         angle = newAngle;
         diameter = newDiam;
