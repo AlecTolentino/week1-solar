@@ -6,12 +6,12 @@ public class Movement {
     private Moon moonSpeed;
    // private Arrays moonA;
 
-    public Movement(SolarSystem newSolarSpeed, Sun speedASun, Planet speedPlanet, Moon speedMoon/*,Arrays newA*/) {
+    public Movement(SolarSystem newSolarSpeed, Sun speedASun/*, Planet speedPlanet, Moon speedMoon,Arrays newA*/) {
 
         solarSpeed =  newSolarSpeed;
         sunSpeed = speedASun;
-        planetSpeed = speedPlanet;
-        moonSpeed = speedMoon;
+       // planetSpeed = speedPlanet;
+       // moonSpeed = speedMoon;
         //moonA = newA;
     }
 
@@ -28,7 +28,7 @@ public class Movement {
             changePlanet.setAngle(changePlanet.getAngle() + changePlanet.getVelocity());
             solarSpeed.drawSolarObject(sunSpeed.getDistance(), sunSpeed.getAngle(), sunSpeed.getDiameter(), sunSpeed.getColour());
 
-            solarSpeed.drawSolarObject(planetSpeed.getDistance(), planetSpeed.getAngle(), planetSpeed.getDiameter(), planetSpeed.getColour());
+            solarSpeed.drawSolarObject(changePlanet.getDistance(), changePlanet.getAngle(), changePlanet.getDiameter(), changePlanet.getColour());
         
     }
 
@@ -37,7 +37,7 @@ public class Movement {
         changeMoon.setAngle(changeMoon.getAngle() + changeMoon.getVelocity());
         changeMoon.setRotAngle(changeMoon.getRotAng() + changeMoon.getRotVelocity());
 
-        solarSpeed.drawSolarObjectAbout(moonSpeed.getDistance(), changeMoon.getAngle(), moonSpeed.getDiameter(), moonSpeed.getColour(), moonSpeed.getRotDis(),  changeMoon.getRotAng());
+        solarSpeed.drawSolarObjectAbout(changeMoon.getDistance(), changeMoon.getAngle(), changeMoon.getDiameter(), changeMoon.getColour(), changeMoon.getRotDis(),  changeMoon.getRotAng());
     }   
 
     // How do i get it to stop so i can draw other objects and make them move also
