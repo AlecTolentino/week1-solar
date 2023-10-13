@@ -69,5 +69,14 @@ public class Planet {
 
     }
 
+    public void movePlanet(Planet changePlanet) {
+
+        changePlanet.setAngle(changePlanet.getAngle() + changePlanet.getVelocity());
+        mySolar.drawSolarObject(mySun.getDistance(), mySun.getAngle(), mySun.getDiameter(), mySun.getColour());
+
+        mySolar.drawSolarObject(changePlanet.getDistance(), changePlanet.getAngle(), changePlanet.getDiameter(), changePlanet.getColour());
+    
+}
+
     
 }

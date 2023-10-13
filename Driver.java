@@ -29,7 +29,7 @@ public class Driver {
         Planet earth = new Planet(nSolar, theSun, 3.1);
         earth.createPlanet(140, 90, 24.5, "BLUE");
 
-        Moon earthMoon = new Moon(nSolar, earth, 3.1, 15);
+        Moon earthMoon = new Moon(nSolar, earth, 3.1, 10);
         earthMoon.createMoon(140, 90, 6, "GRAY", 25, 3);
 
 
