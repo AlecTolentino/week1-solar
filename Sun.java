@@ -1,3 +1,6 @@
+/** 
+ * Sun class capable of creating a sun in the Solar System
+ * */
 public class Sun {
     
     private SolarSystem mySolarSun;
@@ -6,40 +9,74 @@ public class Sun {
     private double angle;
     public double diameter;
     public java.lang.String colour;
-    
-    public Sun(SolarSystem createSolarSun) {
 
-        mySolarSun = createSolarSun;
+    
+    /** 
+     * Constructor for Sun class
+     * Creates a Sun with the following requirements
+     * 
+     * @param mySolarSun Associates a sun with a solar system
+     * @param distance Distance of moon from the sun
+     * @param angle Angle of moon from the sun
+     * @param diameter Diameter of the moon
+     * @param colour Colour of the moon
+     * */
+    public Sun(SolarSystem mySolarSun, double distance, double angle, double diameter, java.lang.String colour) {
+
+        this.mySolarSun = mySolarSun;
+        this.distance = distance;
+        this.angle = angle; 
+        this.diameter = diameter;
+        this.colour = colour;
 
     }
 
+    // GETTERS //
+
+     /**
+     * Obtains the moons distance from the sun
+     * @return The distance from the sun as a double
+     * */
     public double getDistance() {
 
         return distance;
     }
 
+    /**
+     * Obtains the planet's angle from the sun
+     * @return The angle from the sun as a double
+     * */
     public double getAngle() {
 
         return angle;
     }
 
+    /**
+     * Obtains the moons diameter 
+     * @return The diameter fof the moon as a double
+     * */
     public double getDiameter() {
 
         return diameter;
     }
 
+    /**
+     * Obtains the moon's colour
+     * @return The colour of the planet as a java.lang.String
+     * */
     public java.lang.String getColour() {
 
         return colour;
     }
 
-    public void createSun(double newDis, double newAngle, double newDiam, java.lang.String newCol) {
+    // METHODS //
+     /**
+     * Creates a Sun
+     * */
+    public void createSun() {
 
-        //mySolarSun.drawSolarObject(newDis, newAngle, newDiam, newCol);
-        distance = newDis;
-        angle = newAngle;
-        diameter = newDiam;
-        colour = newCol;
+        mySolarSun.drawSolarObject(getDistance(), getAngle(), getDiameter(), getColour());
+   
     }
 
 

@@ -1,3 +1,6 @@
+/** 
+ * Planet class capable of creating a planet in the Solar System
+ * */
 public class Planet {
 
     private SolarSystem mySolar;
@@ -9,36 +12,72 @@ public class Planet {
     public double diameter;
     public java.lang.String colour;
     
-    public Planet(SolarSystem createSolar, Sun createSun, double planSpeed) {
+    /** 
+     * Constructor for Planet class
+     * Creates a Planet with the following requirements
+     * 
+     * @param createSolar Associates a planet with a solar system
+     * @param createSun Associates a planet with a sun
+     * @param distance Distance of planet from the sun
+     * @param angle Angle of planet from the sun
+     * @param diameter Diameter of the planet
+     * @param colour Colour of the planet
+     * @param velocity Sets the velocity of a planet
+     * */
+    public Planet(SolarSystem createSolar, Sun createSun, double distance, double angle, double diameter, java.lang.String colour, double velocity) {
 
         mySolar = createSolar;
         mySun = createSun;
-        velocity = planSpeed;
+        this.velocity = velocity;
+        this.distance = distance;
+        this.angle = angle;
+        this.diameter = diameter;
+        this.colour = colour;
 
     }
 
     // GETTERS //
 
+    /**
+     * Obtains the planet's distance from the sun
+     * @return The distance from the sun as a double
+     * */
     public double getDistance() {
 
         return distance;
     }
-
+    
+    /**
+     * Obtains the planet's angle from the sun
+     * @return The angle from the sun as a double
+     * */
     public double getAngle() {
 
         return angle;
     }
 
+     /**
+     * Obtains the planet's diameter
+     * @return The angle from the sun as a double
+     * */
     public double getDiameter() {
 
         return diameter;
     }
 
+    /**
+     * Obtains the planet's colour
+     * @return The colour of the planet as a java.lang.String
+     * */
     public java.lang.String getColour() {
 
         return colour;
     }
 
+    /**
+     * Obtains the planet's velocity
+     * @return The velocity of the planet
+     * */
     public double getVelocity() {
 
         return velocity;
@@ -47,11 +86,19 @@ public class Planet {
 
     // SETTERS //
 
+    /** 
+     * Sets the velocity of the planet
+     * @param newVelocity The new velocity of the planet
+     * */
     public void setVelocity(double newVelocity) {
 
         velocity = newVelocity;
     }
 
+    /** 
+     * Sets the angle of the planet
+     * @param newAngle The new angle of the planet
+     * */
     public void setAngle(double newAngle) {
 
         angle = newAngle;
@@ -59,24 +106,18 @@ public class Planet {
 
     // METHODS //
 
-    public void createPlanet(double newDis, double newAngle, double newDiam, java.lang.String newCol) {
+    /** 
+     * Moves a planet
+     **/
+    public void movePlanet() {
 
-        //mySolar.drawSolarObject(newDis, newAngle, newDiam, newCol);
-        distance = newDis;
-        angle = newAngle;
-        diameter = newDiam;
-        colour = newCol;
-
-    }
-
-    public void movePlanet(Planet changePlanet) {
-
-        changePlanet.setAngle(changePlanet.getAngle() + changePlanet.getVelocity());
+        setAngle(getAngle() + getVelocity());
         mySolar.drawSolarObject(mySun.getDistance(), mySun.getAngle(), mySun.getDiameter(), mySun.getColour());
 
-        mySolar.drawSolarObject(changePlanet.getDistance(), changePlanet.getAngle(), changePlanet.getDiameter(), changePlanet.getColour());
-    
-}
+        mySolar.drawSolarObject(getDistance(), getAngle(), getDiameter(), getColour());
+        
+        
+    }
 
     
 }
