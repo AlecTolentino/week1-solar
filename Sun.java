@@ -71,7 +71,7 @@ public class Sun {
 
     // METHODS //
      /**
-     * Creates a Sun
+     * Creates a sun
      * */
     public void createSun() {
 

@@ -1,7 +1,7 @@
 /** 
  * Moon class capable of creating a moon in the Solar System
  * */
-public class Moon {
+public class Moon extends SolarObject {
     
     private SolarSystem myMoonsSun;
     private Planet myPlanet;
@@ -31,12 +31,9 @@ public class Moon {
      * */
     public Moon(SolarSystem myMoonsSun, Planet myPlanet, double distance, double angle, double diameter, java.lang.String colour, double centreRotateDis, double centreRotateAng, double velocity, double rotVelocity) {
 
-        this.myMoonsSun = myMoonsSun;
+        super(myMoonsSun, distance, angle, diameter, colour, velocity);
+
         this.myPlanet = myPlanet;
-        this.distance = distance;
-        this.angle = angle;
-        this.diameter = diameter;
-        this.colour = colour;
         this.centreRotateDis = centreRotateDis;
         this.centreRotateAng = centreRotateAng;
         this.velocity = velocity;
@@ -157,7 +154,6 @@ public class Moon {
 
         setAngle(getAngle() + getVelocity());
         setRotAngle(getRotAng() + getRotVelocity());
-
         myMoonsSun.drawSolarObjectAbout(getDistance(), getAngle(), getDiameter(), getColour(), getRotDis(),  getRotAng());
     }   
 }
