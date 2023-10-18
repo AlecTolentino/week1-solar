@@ -7,8 +7,8 @@ public class Sun {
     
     private double distance;
     private double angle;
-    public double diameter;
-    public java.lang.String colour;
+    private double diameter;
+    private java.lang.String colour;
 
     
     /** 

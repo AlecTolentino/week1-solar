@@ -6,11 +6,11 @@ public class Planet extends SolarObject{
     private SolarSystem mySolar;
     Sun mySun;
 
-    private double velocity = 0;
-    private double distance;
-    private double angle;
-    public double diameter;
-    public java.lang.String colour;
+    protected double velocity = 0;
+    protected double distance;
+    protected double angle;
+    protected double diameter;
+    protected java.lang.String colour;
     
     /** 
      * Constructor for Planet class
@@ -30,86 +30,6 @@ public class Planet extends SolarObject{
         mySun = aSun;
      
     }
-
-    // GETTERS //
-
-    // /**
-    //  * Obtains the planet's distance from the sun
-    //  * @return The distance from the sun as a double
-    //  * */
-    // public double getDistance() {
-
-    //     return distance;
-    // }
-    
-    // /**
-    //  * Obtains the planet's angle from the sun
-    //  * @return The angle from the sun as a double
-    //  * */
-    // public double getAngle() {
-
-    //     return angle;
-    // }
-
-    //  /**
-    //  * Obtains the planet's diameter
-    //  * @return The planet's diameter
-    //  * */
-    // public double getDiameter() {
-
-    //     return diameter;
-    // }
-
-    // /**
-    //  * Obtains the planet's colour
-    //  * @return The colour of the planet as a java.lang.String
-    //  * */
-    // public java.lang.String getColour() {
-
-    //     return colour;
-    // }
-
-    // /**
-    //  * Obtains the planet's velocity
-    //  * @return The velocity of the planet
-    //  * */
-    // public double getVelocity() {
-
-    //     return velocity;
-    // }
-
-
-    // // SETTERS //
-
-    // /** 
-    //  * Sets the velocity of the planet
-    //  * @param newVelocity The new velocity of the planet
-    //  * */
-    // public void setVelocity(double newVelocity) {
-
-    //     velocity = newVelocity;
-    // }
-
-    // /** 
-    //  * Sets the angle of the planet
-    //  * @param newAngle The new angle of the planet
-    //  * */
-    // public void setAngle(double newAngle) {
-
-    //     angle = newAngle;
-    // }
-
-    // // METHODS //
-
-    // /** 
-    //  * Moves a planet
-    //  **/
-    // public void movePlanet() {
-
-    //     setAngle(getAngle() + getVelocity());
-    //     mySolar.drawSolarObject(getDistance(), getAngle(), getDiameter(), getColour());
-        
-    // }
 
     
 }

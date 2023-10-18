@@ -5,13 +5,12 @@
 **/
 public class SolarObject {
     
-    private SolarSystem theSolarSystem;
-    private Sun mySun;
-    private double distance;
-    private double angle;
-    public double diameter;
-    public java.lang.String colour;
-    private double velocity = 0;
+    protected SolarSystem theSolarSystem;
+    protected double distance;
+    protected double angle;
+    protected double diameter;
+    protected java.lang.String colour;
+    protected double velocity = 0;
 
     public SolarObject(SolarSystem theSolarSystem, double distance, double angle, double diameter, java.lang.String colour, double velocity) {
 
