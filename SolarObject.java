@@ -12,6 +12,17 @@ public class SolarObject {
     protected java.lang.String colour;
     protected double velocity = 0;
 
+    /** 
+     * Constructor for SolarObject class
+     * Creates a SolarObject with the following requirements
+     * 
+     * @param theSolarSystem Associates a Solar Object with a Solar System
+     * @param distance Distance of Solar Object from the sun
+     * @param angle Angle of Solar Object from the sun
+     * @param diameter Diameter of the Solar Object
+     * @param colour Colour of the Solar Object
+     * @param velocity Sets the velocity of a Solar Object
+    **/
     public SolarObject(SolarSystem theSolarSystem, double distance, double angle, double diameter, java.lang.String colour, double velocity) {
 
         this.theSolarSystem = theSolarSystem;

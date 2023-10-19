@@ -1,6 +1,6 @@
 /** 
  * Planet class capable of creating a planet in the Solar System
- * */
+**/
 public class Planet extends SolarObject{
 
     Sun mySun;
@@ -16,7 +16,7 @@ public class Planet extends SolarObject{
      * @param diameter Diameter of the planet
      * @param colour Colour of the planet
      * @param velocity Sets the velocity of a planet
-     * */
+    **/
     public Planet(SolarSystem mySolar, Sun aSun, double distance, double angle, double diameter, java.lang.String colour, double velocity) {
 
         super(mySolar, distance, angle, diameter, colour, velocity);

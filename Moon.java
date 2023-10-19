@@ -1,6 +1,6 @@
 /** 
- * Moon class capable of creating a moon in the Solar System
- * */
+ * Moon class to create and move a Moon
+**/
 public class Moon extends SolarObject {
     
     protected Planet myPlanet;
@@ -21,7 +21,7 @@ public class Moon extends SolarObject {
      * @param centreRotateDis Distance from given point
      * @param centreRotateAng Angle from given point
      * @param velocity Sets the velocity of a moon
-     * */
+    **/
     public Moon(SolarSystem theSolarSystem, Planet myPlanet, double distance, double angle, double diameter, java.lang.String colour, double centreRotateDis, double centreRotateAng, double velocity, double rotVelocity) {
 
         super(theSolarSystem, distance, angle, diameter, colour, velocity);

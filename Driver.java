@@ -44,7 +44,7 @@ public class Driver {
 
         Comet one = new Comet(nSolar,neptune, 500, 30.2, 3, "RED", 1.2, 80, 20.5, 1.4);
 
-
+        // MAIN LOOP //
 
        while(true) {
 
