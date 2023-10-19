@@ -2,6 +2,8 @@ public class Driver {
     
     public static void main(String[] arguments) {
 
+        int num = 10;
+
         // INSTANCES
 
         SolarSystem nSolar = new SolarSystem(1100, 1100);
@@ -18,7 +20,7 @@ public class Driver {
 
         Planet mars = new Planet(nSolar, theSun, 190, 90,12, "#ce890a", 2.8);
 
-        Planet jupiter = new Planet(nSolar, theSun, 280, 90,42, "#e18909", 2.3);
+        Planet jupiter = new Planet(nSolar, theSun, 290, 90,42, "#e18909", 2.3);
 
         Planet saturn = new Planet(nSolar, theSun, 360, 90,49, "#fffda7", 2);
 
@@ -26,10 +28,18 @@ public class Driver {
 
         Planet neptune = new Planet(nSolar, theSun, 510, 90,35, "#2486db", 1.4);
 
-        Asteroid rogue  = new Asteroid(nSolar, theSun, 235, 90, 3, "GREY", 2.6);
+        Asteroid rogue  = new Asteroid(nSolar, mars, 210, 90, 3, "GREY", 0.5, 0, 23, 0);
+
+        Arrays newArray = new Arrays(nSolar, saturn, 0, 0, 0, "GREEN", 0, 0, 0, 0);
+
+
+        Asteroid ring1 = new Asteroid(nSolar, saturn, 360, 90, 3, "RED", 15, 90, 2, 5);
+
+        Asteroid ring2 = new Asteroid(nSolar, saturn, 360, 90, 3, "YELLOW", 15, 90, 2, 7);
+
+       
 
         Comet one = new Comet(nSolar,neptune, 500, 30.2, 3, "RED", 1.2, 80, 20.5, 1.4);
-
 
 
 
@@ -45,8 +55,12 @@ public class Driver {
             venus.moveObject();
             earth.moveObject();
 
-            rogue.moveObject();
 
+            newArray.addAsteroid(rogue);
+            newArray.addRing(ring1);
+            // ring1.moveRotate();
+            // ring2.moveRotate(); 
+          
             earthMoon.moveRotate();
 
             mars.moveObject();

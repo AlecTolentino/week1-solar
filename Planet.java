@@ -3,15 +3,8 @@
  * */
 public class Planet extends SolarObject{
 
-    private SolarSystem mySolar;
     Sun mySun;
 
-    protected double velocity = 0;
-    protected double distance;
-    protected double angle;
-    protected double diameter;
-    protected java.lang.String colour;
-    
     /** 
      * Constructor for Planet class
      * Creates a Planet with the following requirements

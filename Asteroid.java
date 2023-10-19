@@ -1,9 +1,10 @@
-public class Asteroid extends Planet {
+public class Asteroid extends Moon {
 
-    public Asteroid(SolarSystem mySolar, Sun aSun, double distance, double angle, double diameter, java.lang.String colour, double velocity) {
+    public Asteroid(SolarSystem theSolarSystem, Planet myPlanet, double distance, double angle, double diameter, java.lang.String colour, double centreRotateDis, double centreRotateAng, double velocity, double rotVelocity) {
 
-        super(mySolar, aSun, distance, angle, diameter, colour, velocity);
-     
+        super(theSolarSystem, myPlanet, distance, angle, diameter, colour, centreRotateAng, centreRotateDis, velocity, rotVelocity);
+    
+        
     }
 
     
